@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Calculation Of Circle </title>
+    <link rel="stylesheet" href="sstyle.css">
+</head>
+<body>
+    <form name="area-calculation" onsubmit="return area()">
+        <h1>area calculation</h1>
+        <label for-radius > Radius </label>
+        <input type="number" placeholder="Enter the radius of circle" id="r1" required/ ><br><br><br>
+        <label for-PI > PI </label>
+        <input type="number" placeholder="Enter The value of PI" / id="p1" required/><br><br><br>
+        <div id="result"></div>
+        <input type="submit" value="CALCULATE THE AREA"  />
+       
+    </form>
+   
+    <script type="text/javascript">
+
+        function area(){
+           let r=document.getElementById("r1").value;
+           let p=document.getElementById("p1").value;
+            let area;
+            area=p*r*r;
+            // document.write("The Area Of Circle Is "+area); also right code but we wann show result on landing page so made some changes in this code
+            if (isNaN(r) || isNaN(p)) {
+        alert("Invalid input. Please provide valid numbers for the radius and PI.");
+        return false;
+      }
+
+      let calculatedArea = p * r * r;
+    //   alert("The area of the circle is " + calculatedArea);
+
+       document.getElementById("result").innerText = "The area of the circle is " + calculatedArea;
+            
+            return false;
+                }
+    </script>
+</body>
+</html>
